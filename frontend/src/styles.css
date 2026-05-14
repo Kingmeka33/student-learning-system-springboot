@@ -1,0 +1,105 @@
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f6f8fb;color:#0f172a}button,input,select{font:inherit}.app-shell{min-height:100vh}.top-header{background:white;border-bottom:1px solid #e2e8f0;padding:18px 32px;display:flex;justify-content:space-between;align-items:center}.top-header h1{margin:0;font-size:24px}.top-header p{margin:4px 0 0;color:#64748b}.header-actions{display:flex;gap:12px;align-items:center}.tab-nav{display:flex;gap:8px;background:white;border-bottom:1px solid #e2e8f0;padding:0 28px}.tab{border:none;background:transparent;padding:16px;color:#475569;font-weight:700;text-transform:capitalize;cursor:pointer;border-bottom:3px solid transparent}.tab.active{color:#0f766e;border-bottom-color:#0f766e}.main-content{max-width:1150px;margin:0 auto;padding:28px}.card,.item-card{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:20px;margin-bottom:18px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:12px}input,select{width:100%;min-height:42px;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;background:white}select[multiple]{min-height:130px}.search-row{display:flex;gap:12px;margin:18px 0}.search-row input{max-width:340px}button{border:none;background:#0f766e;color:white;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer}.btn-danger{background:#ef4444}.btn-secondary{background:white;color:#334155;border:1px solid #cbd5e1}.badge{background:#ecfeff;color:#0f766e;border-radius:999px;padding:6px 10px;font-weight:700}.list{display:grid;gap:14px}.item-card h3{margin:0 0 6px}.item-card p{color:#64748b}.actions{display:flex;gap:10px;margin-top:12px}.loading{background:#eff6ff;color:#1d4ed8;padding:12px;border-radius:10px}.avatar{width:56px;height:56px;border-radius:50%;object-fit:cover}.avatar-row{display:flex;align-items:center;gap:14px}.auth-page{min-height:100vh;display:grid;place-items:center;padding:20px}.auth-card{width:min(420px,100%);background:white;border:1px solid #e2e8f0;border-radius:18px;padding:28px;display:grid;gap:12px}@media(max-width:760px){.top-header{align-items:flex-start;flex-direction:column}.form-grid{grid-template-columns:1fr}.main-content{padding:18px}.tab-nav{overflow:auto;padding:0 14px}.search-row{flex-direction:column}}
+
+.muted {
+  color: #64748b;
+}
+
+
+/* Extra visible toast + self-enrollment styles */
+.student-self-card {
+  min-height: 42px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: grid;
+  gap: 4px;
+  background: white;
+}
+
+.toast-container {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9999;
+}
+
+.toast {
+  min-width: 320px;
+  max-width: 420px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+
+/* Course multi-selector */
+
+.enrollment-form {
+  display: grid;
+  gap: 16px;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #334155;
+  font-weight: 700;
+}
+
+.multi-select-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.course-multi-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.course-option {
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 12px;
+  background: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.course-option:hover {
+  border-color: #0f766e;
+  background: #f0fdfa;
+}
+
+.course-option.selected {
+  border-color: #0f766e;
+  background: #ecfeff;
+}
+
+.course-option input {
+  width: auto;
+  min-height: auto;
+  margin-top: 4px;
+}
+
+.course-option span {
+  display: grid;
+  gap: 4px;
+}
+
+.course-option small {
+  color: #64748b;
+}
+
+
+.already-enrolled {
+  color: #b45309;
+  font-weight: 700;
+}
